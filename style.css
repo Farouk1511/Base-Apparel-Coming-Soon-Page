@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: linear-gradient(
+    135deg,
+    hsl(0, 0%, 100%),
+    hsl(0, 100%, 98%)
+  );
+  font-size: 16px;
+  font-weight: 300;
+  font-family: "Josefin Sans", sans-serif;
+  width: 100%;
+  overflow: hidden;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  background-image: url(./images/bg-pattern-desktop.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  float: left;
+  width: 60%;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 400%;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  color: #000;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+h1 span {
+  color: hsl(0, 36%, 70%);
+  font-weight: 300;
+}
+
+.main-text {
+  color: hsl(0, 36%, 70%);
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 50px;
+}
+
+header {
+  margin-bottom: 150px;
+}
+
+.image-container {
+  width: 40%;
+  float: right;
+  height: auto;
+}
+.image-container img {
+  width: 100%;
+  height: 100vh;
+}
+.notify {
+  position: relative;
+}
+
+input[type="email"] {
+  border: 1px solid hsl(0, 36%, 70%);
+  border-right-style: none;
+  padding: 20px;
+  width: 420px;
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  margin: 0;
+  font-size: 80%;
+}
+
+input[type="email"]::placeholder {
+  color: hsl(0, 36%, 70%);
+}
+
+.send-button {
+  cursor: pointer;
+  position: absolute;
+  padding: 18px;
+  width: 100px;
+  border-radius: 53px;
+  -webkit-border-radius: 53px;
+  -moz-border-radius: 53px;
+  -ms-border-radius: 53px;
+  -o-border-radius: 53px;
+  left: 350px;
+  border: none;
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+.send-button.show {
+  background-image: none;
+  box-shadow: -1px 22px 26px -12px hsl(0, 36%, 70%);
+  background-color: hsl(0, 67%, 90%);
+}
+input[type="email"]:focus,
+.send-button:focus {
+  outline: none;
+}
+
+.error-icon {
+  position: absolute;
+  left: 75%;
+  bottom: 25%;
+  opacity: 0;
+}
+
+.error-msg {
+  position: absolute;
+  bottom: -30px;
+  left: 20px;
+  color: hsl(0, 93%, 68%);
+  font-size: 90%;
+  font-weight: 500;
+  opacity: 0;
+}
+
+.error-icon.show,
+.error-msg.show {
+  opacity: 1;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
